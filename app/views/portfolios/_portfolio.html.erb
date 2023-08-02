@@ -1,0 +1,32 @@
+<div id="<%= dom_id portfolio %>">
+  <p>
+    <strong>Title:</strong>
+    <%= portfolio.title %>
+  </p>
+
+    <p>
+    <strong>Subtitle:</strong>
+    <%= portfolio.subtitle %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= portfolio.body %>
+  </p>
+
+   <p>
+    <strong>Body:</strong>
+    <%= portfolio.body %>
+  </p>
+
+   <p>
+    <strong>Main Image:</strong>
+    <%= image_tag portfolio.main_image if !portfolio.main_image.nil? %>
+  </p>
+
+   <p>
+    <strong>Thumb Image:</strong>
+    <%= image_tag portfolio.thumb_image if !portfolio.thumb_image.nil?%>
+  </p>
+
+</div>

@@ -10,6 +10,9 @@ class PortfoliosController < ApplicationController
     
     def edit
     end
+
+    def show
+    end
     
     def create
         
