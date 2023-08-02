@@ -3,11 +3,11 @@
 <%= link_to "Create New Item", new_portfolio_url %>
 
 <% @portfolios.each do |portfolio| %>
-<h1><%= link_to portfolio.title, portfolio_url(portfolio.id) %></h1>
-<p><%= portfolio.subtitle %></p>
+<h3><%= link_to portfolio.title.capitalize, portfolio_url(portfolio.id) %></h3>
+<p><%= portfolio.subtitle.capitalize %></p>
 <p><%= portfolio.body %></p>
 <p><img src ="<%= portfolio.thumb_image %>"></p>
 <%= link_to "Edit", edit_portfolio_path(portfolio.id) %>
-
+<%= link_to "Destroy", portfolio, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }  %>
 
 <% end %>

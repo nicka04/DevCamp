@@ -4,7 +4,6 @@
 
 <div>
   <%= link_to "Edit", edit_portfolio_path(@portfolio) %> |
-  <%= link_to "Back to portfolios", portfolios_path %>
-
-  <%= button_to "Delete", @portfolio, method: :delete %>
+  <%= button_to "Destroy", @portfolio, method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }  %> |
+  <%= link_to "Back", portfolios_path %>
 </div>
